@@ -6,7 +6,7 @@ class ContainerTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SingleChildScrollView( // 防止超出屏幕
+      child: SingleChildScrollView(                      // 滚动视图，防止内容溢出
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,   // 垂直居中
           crossAxisAlignment: CrossAxisAlignment.center, // 水平居中

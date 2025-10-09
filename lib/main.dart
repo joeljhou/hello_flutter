@@ -78,7 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body:
       // const TextTest(),
       // const ImageTest(),
-      const ContainerTest(),
+      // const ContainerTest(),
+      const RowTest(),
     );
   }
 }
