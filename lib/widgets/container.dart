@@ -6,7 +6,9 @@ class ContainerTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SingleChildScrollView(                      // 滚动视图，防止内容溢出
+      child: SingleChildScrollView(       // 滚动视图，防止内容溢出
+        scrollDirection: Axis.vertical,   // 支持垂直滚动
+        padding: const EdgeInsets.all(10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,   // 垂直居中
           crossAxisAlignment: CrossAxisAlignment.center, // 水平居中
@@ -20,10 +22,7 @@ class ContainerTest extends StatelessWidget {
               padding: const EdgeInsets.all(10), // 内边距
               alignment: Alignment.center,       // 内容居中
               color: Colors.orange,              // 背景色
-              child: const Text(
-                '基础容器',
-                style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
-              ),
+              child: const Text('基础容器', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
             ),
 
             // 圆角 + 阴影
@@ -45,10 +44,7 @@ class ContainerTest extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Text(
-                '圆角 + 阴影',
-                style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
-              ),
+              child: const Text('圆角 + 阴影', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
             ),
 
             // 渐变背景 + 边框
@@ -67,10 +63,7 @@ class ContainerTest extends StatelessWidget {
                 border: Border.all(color: Colors.white, width: 3),   // 白色边框，宽度3
                 borderRadius: BorderRadius.circular(12),             // 圆角
               ),
-              child: const Text(
-                '渐变 + 边框',
-                style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
-              ),
+              child: const Text('渐变 + 边框', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
             ),
 
             // 背景图片容器
@@ -92,10 +85,7 @@ class ContainerTest extends StatelessWidget {
                   color: Colors.black54,                   // 半透明黑色背景
                   borderRadius: BorderRadius.circular(8),  // 圆角
                 ),
-                child: const Text(
-                  '背景图片容器',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
-                ),
+                child: const Text('背景图片容器', style: TextStyle(color: Colors.white, fontSize: 16),),
               ),
             ),
 
@@ -121,10 +111,7 @@ class ContainerTest extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Text(
-                '圆形容器',
-                style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
-              ),
+              child: const Text('圆形容器', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),),
             ),
           ],
         ),

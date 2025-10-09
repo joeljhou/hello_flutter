@@ -6,3 +6,4 @@ export 'row.dart';
 export 'flex.dart';
 export 'listview.dart';
 export 'gridview.dart';
+export 'gesture.dart';

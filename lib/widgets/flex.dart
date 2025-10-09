@@ -10,6 +10,8 @@ class FlexTest extends StatelessWidget {
         scrollDirection: Axis.vertical,     // 支持垂直滚动
         padding: const EdgeInsets.all(10),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,   // 垂直居中
+          crossAxisAlignment: CrossAxisAlignment.center, // 水平居中
           children: [
             // 1️⃣ 水平 Flex (相当于 Row)
             const Text('1️⃣ 水平 Flex (Row)', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
