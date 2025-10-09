@@ -8,28 +8,31 @@ class RowTest extends StatelessWidget {
     return Center(
       child: SingleChildScrollView(       // 滚动视图，防止内容溢出
         scrollDirection: Axis.vertical,   // 支持垂直滚动
+        padding: const EdgeInsets.all(10),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,   // 主轴居中
-          mainAxisSize: MainAxisSize.min,                // Row 只占子元素总宽度（默认是 MainAxisSize.max，占满父容器）
+          mainAxisAlignment: MainAxisAlignment.center,   // 垂直居中
+          crossAxisAlignment: CrossAxisAlignment.center, // 水平居中
+          mainAxisSize: MainAxisSize.min,                // 控制主轴大小（默认max表示占满父容器，min表示包裹子件）
           children: <Widget>[
-            const SizedBox(height: 20),
-
-            // 水平居中
+            // 1️⃣ 水平居中
+            const Text('1️⃣ 基础 Row', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+            const SizedBox(height: 10),
             Row(
               // textDirection: TextDirection.ltr,            // 从左到右布局（默认）
               mainAxisAlignment: MainAxisAlignment.center,    // 子件水平居中
               children: const [
                 Icon(Icons.star, color: Colors.orange),
                 SizedBox(width: 10),
-                Text('基础 Row', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                Text('水平居中', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                 SizedBox(width: 10),
                 Icon(Icons.star, color: Colors.orange),
               ],
             ),
-
             const SizedBox(height: 20),
 
-            // 水平均匀分布
+            // 2️⃣ 水平均匀分布
+            const Text('2️⃣ 水平均匀分布 (spaceAround)', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,  // 主轴均匀分布
               children: const [
@@ -38,33 +41,36 @@ class RowTest extends StatelessWidget {
                 Icon(Icons.settings, color: Colors.red),
               ],
             ),
-
             const SizedBox(height: 20),
 
-            // 纵轴顶部对齐
+            // 3️⃣ 纵轴顶部对齐
+            const Text('3️⃣ 纵轴顶部对齐', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+            const SizedBox(height: 10),
             Container(
               color: Colors.grey[200],     // 背景色
               height: 100,                 // 固定高度
               width: double.infinity,      // 宽度撑满父容器
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,     // 纵轴顶部对齐
+                mainAxisAlignment: MainAxisAlignment.center,       // 主轴居中对齐
+                crossAxisAlignment: CrossAxisAlignment.start,      // 纵轴顶部对齐
                 children: const [
                   Icon(Icons.access_alarm, size: 40, color: Colors.purple),
                   SizedBox(width: 10),
-                  Text('纵轴（垂直）顶部对齐', style: TextStyle(fontSize: 18),),
+                  Text('纵轴顶部对齐', style: TextStyle(fontSize: 18),),
                 ],
               ),
             ),
-
             const SizedBox(height: 20),
 
-            // Expanded 占比布局
+            // 4️⃣ Expanded 占比布局
+            const Text('4️⃣ Expanded 占比布局', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+            const SizedBox(height: 10),
             Row(
               children: const [
                 Expanded(
                   flex: 2,
-                  child: Text('左边占 2/3', textAlign: TextAlign.center,   // 文字内容居中
-                    style: TextStyle(fontSize: 16, color: Colors.green),  // 文字样式
+                  child: Text('2/3', textAlign: TextAlign.center,         // 文字内容居中
+                    style: TextStyle(fontSize: 16, color: Colors.green),  // 文字样式（绿色）
                   ),
                 ),
                 Expanded(
@@ -72,16 +78,16 @@ class RowTest extends StatelessWidget {
                   child: ColoredBox(                // 背景色盒子
                     color: Colors.blue,             // 背景色（蓝色）
                     child: Center(                  // 内容居中
-                      child: Text('右边占 1/3', style: TextStyle(color: Colors.white),),   // 文字样式（白色）
+                      child: Text('1/3', style: TextStyle(color: Colors.white),),   // 文字样式（白色）
                     ),
                   ),
                 ),
               ],
             ),
-
             const SizedBox(height: 20),
 
-            // Row 嵌套 Container
+            // 5️⃣ Row 嵌套 Container
+            const Text('5️⃣ Row 嵌套 Container', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -112,7 +118,6 @@ class RowTest extends StatelessWidget {
                 ),
               ],
             ),
-
             const SizedBox(height: 20),
           ],
         ),
