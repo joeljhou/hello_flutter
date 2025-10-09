@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/widgets/widgets.dart';
 
+import 'network/network.dart';
+
 // 应用入口函数
 void main() {
   runApp(const MyApp());
@@ -83,7 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
       // const FlexTest(),
       // const ListviewTest(),
       // const GridViewTest(),
-      const GestureTest(),
+      // const GestureTest(),
+
+      const HttpTest(),
     );
   }
 }
