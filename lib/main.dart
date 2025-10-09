@@ -1,9 +1,6 @@
 // 导入 Flutter 的 Material 组件库（包含按钮、文本、布局等常用UI组件）
 import 'package:flutter/material.dart';
-
-// 导入 自定义组件
-import 'widgets/text.dart';
-import 'widgets/image.dart';
+import 'package:hello_flutter/widgets/widgets.dart';
 
 // 应用入口函数
 void main() {
@@ -78,11 +75,10 @@ class _MyHomePageState extends State<MyHomePage> {
       //   child: const Icon(Icons.add), // “+” 图标
       // ),
 
-      // 展示文本组件
-      // body: const TextDemo(),
-
-      // 展示图片组件
-      body: const ImageDemo(),
+      body:
+      // const TextTest(),
+      // const ImageTest(),
+      const ContainerTest(),
     );
   }
 }
