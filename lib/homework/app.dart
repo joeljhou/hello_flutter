@@ -1,5 +1,30 @@
 import 'package:flutter/material.dart';
 
+// 使用接口请求数据，搭建一个静态UI界面
+// https://sanlittt.github.io/lianxisheng.github.io/test.json
+// {
+// 	"data": {
+// 		"imageUrl": "https://raw.githubusercontent.com/flutter/website/master/examples/layout/lakes/step5/images/lake.jpg",
+// 		"titleSection": {
+// 			"title": "Oeschinen Lake Campground",
+// 			"subTitle": "Kandersteg, Switzerland",
+// 			"text": "41",
+// 			"icon": "Icons.star"
+// 		},
+// 		"buttonSection": [{
+// 				"CALL": "Icons.call"
+// 			},
+// 			{
+// 				"ROUTE": "Icons.near_me"
+// 			},
+// 			{
+// 				"SHARE": "Icons.share"
+// 			}
+// 		],
+// 		"textContext": "Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situated 1,578 meters above sea level, it is one of the larger Alpine Lakes. A gondola ride from Kandersteg, followed by a half-hour walk through pastures and pine forest, leads you to the lake, which warms to 20 degrees Celsius in the summer. Activities enjoyed here include rowing, and riding the summer toboggan run."
+// 	}
+// }
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
